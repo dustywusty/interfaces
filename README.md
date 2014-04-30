@@ -1,10 +1,19 @@
-### Hmm?
+### Hm?
 
 * Produces output similar to `os.networkInterfaces()`, but with an added MAC address per interface
-* `os.networkInterfaces()` is being changed in v0.12 to include this functionality [See #6686](https://github.com/joyent/node/issues/6686), but I needed it **tonight**
- 
-### Todo
-* Test on something other than OS X
+* `os.networkInterfaces()` was changed in master and will be first released in v0.12 to include this functionality
+* See [#6686](https://github.com/joyent/node/issues/6686)
+* `lib/utils.js` also includes a synchronous execute that has been added master and will be released in v0.12
+* See [Changeset](https://github.com/joyent/node/compare/joyent:d58c206...joyent:e8df267)
+
+### I've created this plugin to hold me over until:
+* v0.12 is out
+* i'm in a good position to update
+* ..save me v0.12, you're my only hope.
+
+### Tested On
+# 10.9.2 build: 13C64 w/ nodev0.10.26
+# 12.04 LTS  w/ node v0.10.26
 
 ### Usage
 
