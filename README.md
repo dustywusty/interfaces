@@ -1,8 +1,8 @@
-### Brief
+### Hmm?
 
-* Produces output similar to `os.networkInterfaces()`, but with added MAC address per interface
-* `os.networkInterfaces()` is being changed in v0.12 to include this functionality [See #6686](https://github.com/joyent/node/issues/6686), but I need it this week.
-* 
+* Produces output similar to `os.networkInterfaces()`, but with an added MAC address per interface
+* `os.networkInterfaces()` is being changed in v0.12 to include this functionality [See #6686](https://github.com/joyent/node/issues/6686), but I needed it **tonight**
+ 
 
 ### Usage
 
@@ -12,7 +12,7 @@ var interfaces = require('interfaces');
 console.log(interfaces());
 ```
 ```
-node test.js             
+$ node test.js             
 { lo0: 
    [ { address: '::1',
        family: 'IPv6',
