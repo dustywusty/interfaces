@@ -1,0 +1,68 @@
+{
+  "name": "interfaces",
+  "version": "0.0.1",
+  "keywords" : [
+    "ifconfig",
+    "ipconfig",
+    "mac address",
+    "mac",
+    "network interface"
+  ],
+  "maintainers": [
+    {
+      "name": "Dustin Clark",
+      "email": "dusty@clarkda.com",
+      "web": "http://clarkda.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Dustin Clark",
+      "email": "dusty@clarkda.com",
+      "web": "http://clarkda.com"
+    }
+  ],
+  "bugs": {
+    "web": "https://github.com/clarkda/interfaces/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": [
+    {
+      "type": "git",
+      "url": "https://github.com/clarkda/interfaces.git"
+    }
+  ],
+  "dependencies": {
+    "execSync": "*",
+    "underscore" : "*"
+  },
+  "devDependencies" : {
+    "jshint" : "*",
+    "jshint-stylish" : "*",
+    "madge": "*"
+  },
+  "jshintConfig" : {
+    "camelcase" : "true",
+    "curly" : "true",
+    "eqeqeq" : "true",
+    "indent" : "indent:4",
+    "laxbreak" : "true",
+    "laxcomma" : "true",
+    "maxcomplexity" : 3,
+    "maxdepth" : 2,
+    "maxparams" : 3,
+    "maxstatements" : 10,
+    "node" : "true",
+    "quotmark": "single",
+    "trailing" : "true",
+    "undef" : "true"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
