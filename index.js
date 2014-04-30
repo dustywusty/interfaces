@@ -9,30 +9,23 @@ module.exports = (function() {
     , interfaces  = os.networkInterfaces()
     , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9a-f]{1,2}))/i;
 
-  switch(os.platform()) {
-    case 'linux':
-    case 'darwin':
-      command = 'ifconfig';
-      break;
-    case 'win32':
-    case 'win64':
-      command = 'getmac /fo csv /nh /v ';
-      break;
-    default:
-      command = 'ifconfig';
-      break;
-  }
-
   _.each(Object.keys(interfaces), function(interfaceName) {
     var ifconfig = utils.execSync(command + ' ' + interfaceName)
-      , macAddress = '00:00:00:00:00:00'
-      , matches = regex.exec(ifconfig);
+      , macAddress = '00:00:00:00:00:00';
     //..
-    if (os.platform() === 'win32'
-      || os.platform() === 'win64') {
-      command = command + '| find ' + interfaceName;
+    switch(os.platform()) {
+      case 'win32':
+      case 'win64':
+        command = 'getmac /fo csv /nh /v | find "' + interfaceName + '"';
+      break;
+      case 'linux':
+      case 'darwin':
+      default:
+        command = 'ifconfig ' + interfaceName;
+      break;
     }
     // ..
+    var matches = regex.exec(ifconfig);
     if (matches && matches.length > 0) {
       macAddress = matches[0];
     }
@@ -41,6 +34,5 @@ module.exports = (function() {
       interfaces[interfaceName][address]['mac'] = macAddress;
     }
   });
-
   return interfaces;
 });
