@@ -3,6 +3,8 @@
 * Produces output similar to `os.networkInterfaces()`, but with an added MAC address per interface
 * `os.networkInterfaces()` is being changed in v0.12 to include this functionality [See #6686](https://github.com/joyent/node/issues/6686), but I needed it **tonight**
  
+### Todo
+* Test on something other than OS X
 
 ### Usage
 
