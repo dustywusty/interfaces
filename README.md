@@ -6,9 +6,7 @@
 
 ### I've created this plugin to hold me over until
 * v0.12 is out
-* i'm in a good position to update
-
-### Save me v0.12, you're my only hope.
+* it wont be practical to update on day one
 
 ### Tested On
 | OS               | Node     |
