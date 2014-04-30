@@ -1,3 +1,3 @@
-var interfaces = require('./index.js');
+var interfaces = require('..');
 
 console.log(interfaces());
