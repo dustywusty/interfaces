@@ -16,10 +16,10 @@ module.exports = (function() {
       break;
     case 'win32':
     case 'win64':
-      command = 'ipconfig';
+      command = 'getmac /fo csv /nh /v ';
       break;
     default:
-      command = 'ipconfig';
+      command = 'ifconfig';
       break;
   }
 
@@ -27,6 +27,11 @@ module.exports = (function() {
     var ifconfig = utils.execSync(command + ' ' + interfaceName)
       , macAddress = '00:00:00:00:00:00'
       , matches = regex.exec(ifconfig);
+    //..
+    if (os.platform() === 'win32'
+      || os.platform() === 'win64') {
+      command = command + '| find ' + interfaceName;
+    }
     // ..
     if (matches && matches.length > 0) {
       macAddress = matches[0];
