@@ -38,31 +38,6 @@
     }
   ],
   "dependencies": {
-    "execSync": "*",
     "underscore" : "*"
-  },
-  "devDependencies" : {
-    "jshint" : "*",
-    "jshint-stylish" : "*",
-    "madge": "*"
-  },
-  "jshintConfig" : {
-    "camelcase" : "true",
-    "curly" : "true",
-    "eqeqeq" : "true",
-    "indent" : "indent:4",
-    "laxbreak" : "true",
-    "laxcomma" : "true",
-    "maxcomplexity" : 3,
-    "maxdepth" : 2,
-    "maxparams" : 3,
-    "maxstatements" : 10,
-    "node" : "true",
-    "quotmark": "single",
-    "trailing" : "true",
-    "undef" : "true"
-  },
-  "scripts": {
-    "test": "make test"
   }
 }
