@@ -7,11 +7,10 @@ module.exports = (function() {
 
   var command     = undefined
     , interfaces  = os.networkInterfaces()
+    , macAddress = '00:00:00:00:00:00'
     , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9a-f]{1,2}))/i;
 
   _.each(Object.keys(interfaces), function(interfaceName) {
-    var ifconfig = utils.execSync(command + ' ' + interfaceName)
-      , macAddress = '00:00:00:00:00:00';
     //..
     switch(os.platform()) {
       case 'win32':
@@ -25,7 +24,8 @@ module.exports = (function() {
       break;
     }
     // ..
-    var matches = regex.exec(ifconfig);
+    var ifconfig = utils.execSync(command)
+      , matches = regex.exec(ifconfig);
     if (matches && matches.length > 0) {
       macAddress = matches[0];
     }
