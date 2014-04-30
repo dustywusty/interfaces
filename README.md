@@ -8,7 +8,7 @@
 * v0.12 is out
 * i'm in a good position to update
 
-### Ssave me v0.12, you're my only hope.
+### Save me v0.12, you're my only hope.
 
 ### Tested On
 * 10.9.2 build: 13C64 w/ nodev0.10.26
