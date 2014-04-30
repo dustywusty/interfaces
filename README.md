@@ -11,8 +11,11 @@
 ### Save me v0.12, you're my only hope.
 
 ### Tested On
-* 10.9.2 build: 13C64 w/ nodev0.10.26
-* 12.04 LTS  w/ node v0.10.26
+| OS               | Node     |
+| ---------------- | -------- |
+| OS X 10.9.2      | v0.10.26 |
+| Ubuntu 12.04 LTS | v0.10.26 |
+
 
 ### Usage
 
