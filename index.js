@@ -1,6 +1,6 @@
-var _   = require('underscore')
-  , os  = require('os')
-  , sh  = require('execSync');
+var _     = require('underscore')
+  , os    = require('os')
+  , utils = require('./lib/utils.js');
 
 module.exports = (function() {
   'use strict';
@@ -24,9 +24,9 @@ module.exports = (function() {
   }
 
   _.each(Object.keys(interfaces), function(interfaceName) {
-    var ifconfig = sh.exec(command + ' ' + interfaceName)
+    var ifconfig = utils.execSync(command + ' ' + interfaceName)
       , macAddress = '00:00:00:00:00:00'
-      , matches = regex.exec(ifconfig.stdout);
+      , matches = regex.exec(ifconfig);
     // ..
     if (matches && matches.length > 0) {
       macAddress = matches[0];
