@@ -8,10 +8,11 @@ This plugin will hold me over until v0.12 is released and stable -- and adds nee
 * I've tried to keep the output and usage as close as I can to what is in `master` -- so you should /knockonwood/ just be able to switch your call when you update
 
 ### Tested On
-| OS               | Node     |
-| ---------------- | -------- |
-| OS X 10.9.2      | v0.10.26 |
-| Ubuntu 12.04 LTS | v0.10.26 |
+| OS               | Node    |
+| ---------------- | ------- |
+| OS X 10.9.2      | 0.10.26 |
+| Ubuntu 12.04 LTS | 0.10.26 |
+| Wind 7 Ent. Sp1  | 0.10.26 |
 
 
 ### Usage
