@@ -12,7 +12,7 @@ This plugin will hold me over until v0.12 is released and stable -- and adds nee
 | ---------------- | ------- |
 | OS X 10.9.2      | 0.10.26 |
 | Ubuntu 12.04 LTS | 0.10.26 |
-| Wind 7 Ent. Sp1  | 0.10.26 |
+| Win 7 Ent. Sp1   | 0.10.26 |
 
 
 ### Usage
