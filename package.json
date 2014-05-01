@@ -1,6 +1,7 @@
 {
   "name": "interfaces",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "displays network interface info including hardware mac addresses for versions of node < 0.12",
   "keywords" : [
     "ifconfig",
     "ipconfig",
@@ -8,35 +9,20 @@
     "mac",
     "network interface"
   ],
-  "maintainers": [
-    {
-      "name": "Dustin Clark",
-      "email": "dusty@clarkda.com",
-      "web": "http://clarkda.com"
-    }
-  ],
-  "contributors": [
-    {
-      "name": "Dustin Clark",
-      "email": "dusty@clarkda.com",
-      "web": "http://clarkda.com"
-    }
-  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clarkda/interfaces.git"
+  },
+  "author": {
+    "name": "Dustin Clark",
+    "email": "dusty@clarkda.com",
+    "url": "https://github.com/clarkda"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/clarkda/interfaces/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
-  "repository": [
-    {
-      "type": "git",
-      "url": "https://github.com/clarkda/interfaces.git"
-    }
-  ],
   "dependencies": {
     "underscore" : "*"
   }
