@@ -9,8 +9,8 @@ module.export = (function() {
           + 'inet 10.56.1.252 netmask 0xffffff00 broadcast 10.56.1.255'
           + 'nd6 options=1<PERFORMNUD>'
           + '  media: autoselect'
-          + 'status: active',
-      lo0 : // ifconfig lo0
+          + 'status: active'
+    , lo0 : // ifconfig lo0
         'lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384'
           + 'options=3<RXCSUM,TXCSUM>'
           + '  inet6 ::1 prefixlen 128'
@@ -29,7 +29,7 @@ module.export = (function() {
           + 'TX packets:214 errors:0 dropped:0 overruns:0 carrier:0'
           + 'collisions:0 txqueuelen:1000'
           + 'RX bytes:34975 (34.9 KB)  TX bytes:28069 (28.0 KB)'
-      , lo : //ifconfig lo
+    , lo : //ifconfig lo
         'lo        Link encap:Local Loopback'
           + 'inet addr:127.0.0.1  Mask:255.0.0.0'
           + 'inet6 addr: ::1/128 Scope:Host'
@@ -46,4 +46,3 @@ module.export = (function() {
     win64: this.win32
   }
 }());
-
