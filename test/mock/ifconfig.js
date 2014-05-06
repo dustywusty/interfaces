@@ -1,4 +1,4 @@
-module.export = (function() {
+module.exports = (function() {
   return {
     //Mac OS X 10.9.2 Build: 13C64
     darwin: {
