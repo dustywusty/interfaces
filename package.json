@@ -25,5 +25,9 @@
   },
   "dependencies": {
     "underscore" : "*"
+  },
+  "devDependencies" : {
+    "mocha": "*",
+    "mockery": "*"
   }
 }
