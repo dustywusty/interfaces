@@ -1,8 +1,11 @@
 module.exports = (function() {
+  /**
+   * Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+   */
   return {
-    //Mac OS X 10.9.2 Build: 13C64
+    //mock command output
     commandStdout: {
-      eth0 : //ifconfig eth0
+      eth0 : //ifconfig eth0 output
         'eth0      Link encap:Ethernet  HWaddr 08:00:27:12:96:98'
           + 'inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0'
           + 'inet6 addr: fe80::a00:27ff:fe12:9698/64 Scope:Link'
@@ -21,32 +24,31 @@ module.exports = (function() {
           + 'collisions:0 txqueuelen:0'
           + 'RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)'
     },
+    //mock os.networkInterfaces() output
     interfaces: {
-      'Local Area Connection 2': [
-        {
-          address: 'fe80::a180:55b3:da45:fbc0',
-          family: 'IPv6',
-          internal: false
-        }
+    lo: [
+      {
+        address: '127.0.0.1',
+        family: 'IPv4',
+        internal: true
+      }
+      , { address: '::1',
+        family: 'IPv6',
+        internal: true
+      }
+    ]
+      , eth0:[
+      {
+        address: '10.0.2.15',
+        family: 'IPv4',
+        internal: false
+      }
       , {
-          address: '169.254.251.192',
-          family: 'IPv4',
-          internal: false
-        }
-      ]
-    , 'Loopback Pseudo-Interface 1': [
-        {
-          address: '::1',
-          family: 'IPv6',
-          internal: true
-        }
-      , {
-          address: '127.0.0.1',
-          family: 'IPv4',
-          internal: true
-        }
-      ]
-    }
+        address: 'fe80::a00:27ff:fe12:9698',
+        family: 'IPv6',
+        internal: false
+      }
+    ]
+  }
   }
 }());
-
