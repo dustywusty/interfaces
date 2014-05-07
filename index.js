@@ -1,31 +1,20 @@
-var _     = require('underscore')
-  , os    = require('os')
-  , utils = require('./lib/utils.js');
-
 module.exports = (function() {
   'use strict';
 
-  var command     = undefined
+  var _     = require('underscore')
+    , os    = require('os')
+    // ..
+    , command     = undefined
     , interfaces  = os.networkInterfaces()
-    , macAddress  = '00:00:00:00:00:00'
-    , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9a-f]{1,2}))/i;
+    , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9a-f]{1,2}))/i
+    , utils = require('./lib/utils');
 
   _.each(Object.keys(interfaces), function(interfaceName) {
-    //..
-    switch(os.platform()) {
-      case 'win32':
-      case 'win64':
-        command = 'getmac /fo csv /nh /v | find "' + interfaceName + '"';
-      break;
-      case 'linux':
-      case 'darwin':
-      default:
-        command = 'ifconfig ' + interfaceName;
-      break;
-    }
     // ..
-    var ifconfig = utils.execSync(command)
+    var ifconfig = utils.getInterfaceInfo(interfaceName)
+      , macAddress  = '00:00:00:00:00:00'
       , matches = regex.exec(ifconfig);
+
     if (matches && matches.length > 0) {
       macAddress = matches[0];
     }
