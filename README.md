@@ -1,5 +1,7 @@
 ### Hm?
 
+[![Build Status](https://travis-ci.org/clarkda/interfaces.svg?branch=master)](https://travis-ci.org/clarkda/interfaces)
+
 This plugin will hold me over until v0.12 is released and stable -- and adds needed functionality for those can't or wont update
 
 * Produces output similar to `os.networkInterfaces()`, but with an added MAC address per interface
