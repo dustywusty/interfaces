@@ -5,7 +5,7 @@ module.exports = (function() {
     , os    = require('os')
     // ..
     , interfaces  = os.networkInterfaces()
-    , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9a-f]{1,2}))/i
+    , regex       = /(([0-9a-f]{1,2}[\.:-]){5}([0-9f-f]{1,2}))/i
     , utils = require('./lib/utils');
 
   _.each(Object.keys(interfaces), function(interfaceName) {

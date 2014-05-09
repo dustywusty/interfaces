@@ -1,4 +1,4 @@
-module.exports = (function() {
+module.exports = (function(macAddress) {
   /**
    * Mac OS X 10.9.2 Build: 13C64
    */
@@ -7,7 +7,7 @@ module.exports = (function() {
     commandStdout: {
       en0 : //ifconfig en0
         'en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500'
-          + 'ether b8:f6:b1:1c:2e:07'
+          + 'ether ' + macAddress
           + 'inet6 fe80::baf6:b1ff:fe1c:2e07%en0 prefixlen 64 scopeid 0x4'
           + 'inet 10.56.1.252 netmask 0xffffff00 broadcast 10.56.1.255'
           + 'nd6 options=1<PERFORMNUD>'
@@ -54,4 +54,4 @@ module.exports = (function() {
       ]
     }
   }
-}());
+});

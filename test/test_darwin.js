@@ -10,7 +10,6 @@ mockery.enable({
   warnOnUnregistered: false
 });
 
-
 /**
  * TEST DARWIN INTERFACE en0
  */

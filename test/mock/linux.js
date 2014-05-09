@@ -32,23 +32,23 @@ module.exports = (function() {
         family: 'IPv4',
         internal: true
       }
-      , { address: '::1',
+    , { address: '::1',
         family: 'IPv6',
         internal: true
       }
     ]
-      , eth0:[
-      {
-        address: '10.0.2.15',
-        family: 'IPv4',
-        internal: false
-      }
+    , eth0:[
+        {
+          address: '10.0.2.15',
+          family: 'IPv4',
+          internal: false
+        }
       , {
-        address: 'fe80::a00:27ff:fe12:9698',
-        family: 'IPv6',
-        internal: false
-      }
-    ]
-  }
+          address: 'fe80::a00:27ff:fe12:9698',
+          family: 'IPv6',
+          internal: false
+        }
+      ]
+    }
   }
 }());
