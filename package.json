@@ -29,5 +29,8 @@
   "devDependencies" : {
     "mocha": "*",
     "mockery": "*"
+  },
+  "scripts": {
+    "test": "mocha test/test*"
   }
 }
