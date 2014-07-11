@@ -1,6 +1,6 @@
 {
   "name": "interfaces",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "displays network interface info including hardware mac addresses for versions of node < 0.12",
   "keywords" : [
     "ifconfig",
