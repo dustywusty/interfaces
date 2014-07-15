@@ -19,7 +19,7 @@ describe('interface() - darwin', function() {
   var config = {
     interface: 'en0',
     platform: 'darwin',
-    macAddress:'b8:f6:b1:1c:2e:07'
+    macAddress:'b8:f6:b1:1c:2e:a7'
   };
 
   mockery.registerMock('config', config);
